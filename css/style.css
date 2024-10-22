@@ -518,11 +518,16 @@ ul.email li a i {
 .slider_main {
   padding: 80px 0;
   padding-top: 10%;
-  background: url(../images/banner.png);
+  background: url(../images/banner1.jpg);
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.background-tint {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
 }
 
 .relative {
