@@ -1,26 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- basic -->
+    <!-- Basic -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- mobile metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-    <!-- site metas -->
     <title>ACMI - Devamatha</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <!-- bootstrap css -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- style css -->
     <link rel="stylesheet" href="css/style.css" />
-    <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css" />
-    <!-- fevicon -->
     <link rel="icon" href="images/fevicon.png" type="image/gif" />
-    <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link
       rel="stylesheet"
@@ -28,16 +19,15 @@
     />
     <link rel="stylesheet" href="css/bootstrap-datepicker.min.css" />
   </head>
-  <!-- body -->
+
   <body class="main-layout">
-    <!-- header -->
     <header class="header-area">
       <div class="logo">
         <a href="index.html">ACMI - Devamatha</a>
       </div>
     </header>
-    <!-- end header inner -->
-    <!-- banner -->
+
+    <!-- Banner -->
     <div class="full_bg">
       <div class="slider_main background-tint">
         <!-- carousel code -->
@@ -59,6 +49,7 @@
                           repeat predefined chunks as necessary, making this the
                           first true generator on the Internet. It uses a
                           dictionary of over 200 Latin words, combined with
+                          different patterns.
                         </p>
                       </div>
                     </div>
@@ -70,88 +61,23 @@
         </div>
       </div>
     </div>
-    <!-- end banner -->
-    <!-- perfect -->
+
+    <!-- Perfect Section -->
     <div class="perfect">
       <div class="container_width">
-        <div class="row d_flex grig">
-          <div class="col-lg-6">
-            <div class="perfect_img">
-              <span>02 feb</span>
-              <figure><img src="images/perfe1.jpg" alt="#" /></figure>
-            </div>
-          </div>
-          <div class="col-lg-6 order">
-            <div class="titlepage text_align_left">
-              <h2>Some Tips for Planning a Perfect Summer Vacation in</h2>
-              <p>
-                All the Lorem Ipsum generators on the Internet tend to repeat
-                predefined chunks as necessary, making this the first true
-                generator on the Internet. It uses a dictionary of over 200
-                Latin words, combined withAll the Lorem Ipsum generators on the
-                Internet tend to repeat predefined chunks as necessary, making
-                this the first true generator on the Internet. It uses a
-                dictionary of over 200 Latin words, combined with
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row d_flex">
-          <div class="col-lg-6">
-            <div class="titlepage flot_right text_align_left">
-              <h2>Magic: Things You Can’t Resist</h2>
-              <p>
-                All the Lorem Ipsum generators on the Internet tend to repeat
-                predefined chunks as necessary, making this the first true
-                generator on the Internet. It uses a dictionary of over 200
-                Latin words, combined withAll the Lorem Ipsum generators on the
-                Internet tend to repeat predefined chunks as necessary, making
-                this the first true generator on the Internet. It uses a
-                dictionary of over 200 Latin words, combined with
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="perfect_img right_span">
-              <span>03 feb</span>
-              <figure><img src="images/perfe2.jpg" alt="#" /></figure>
-            </div>
-          </div>
-        </div>
-        <div class="row d_flex grig">
-          <div class="col-lg-6">
-            <div class="perfect_img">
-              <span>04 feb</span>
-              <figure><img src="images/perfe3.jpg" alt="#" /></figure>
-            </div>
-          </div>
-          <div class="col-lg-6 order">
-            <div class="titlepage text_align_left">
-              <h2>Magic: Things You Can’t Resist</h2>
-              <p>
-                All the Lorem Ipsum generators on the Internet tend to repeat
-                predefined chunks as necessary, making this the first true
-                generator on the Internet. It uses a dictionary of over 200
-                Latin words, combined withAll the Lorem Ipsum generators on the
-                Internet tend to repeat predefined chunks as necessary, making
-                this the first true generator on the Internet. It uses a
-                dictionary of over 200 Latin words, combined with
-              </p>
-            </div>
-          </div>
+        <div class="row d_flex grig" id="perfect-section">
+          <!-- Dynamic content will be injected here -->
         </div>
       </div>
     </div>
-    <!-- end perfect -->
 
-    <!--  footer -->
+    <!-- Footer -->
     <footer>
       <section id="footer">
         <div class="footer">
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <!-- Changed to full width for the footer -->
                 <div class="hedingh3 text_align_left">
                   <ul class="top_infomation">
                     <li>
@@ -183,13 +109,66 @@
       </section>
     </footer>
 
-    <!-- end footer -->
-    <!-- Javascript files-->
+    <!-- JavaScript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/custom.js"></script>
+
+    <!-- Script to Load CSV and Populate Perfect Section -->
+    <script>
+      let perfectData = []; // Array to hold data from the CSV
+
+      // Function to load the CSV and parse it
+      function loadPerfectCSV() {
+        const csvFile = "images.csv"; // Path to CSV file
+        fetch(csvFile)
+          .then((response) => response.text())
+          .then((data) => {
+            parsePerfectCSV(data);
+            populatePerfectSection(); // Populate the section after CSV data is loaded
+          });
+      }
+
+      // Parse CSV data and convert it to an array of objects
+      function parsePerfectCSV(data) {
+        const rows = data.split("\n").slice(1); // Remove the header row
+        rows.forEach((row) => {
+          const [imageSrc, heading, description] = row.split(",");
+          if (imageSrc && heading && description) {
+            perfectData.push({ imageSrc, heading, description });
+          }
+        });
+      }
+
+      // Function to populate the perfect section dynamically
+      function populatePerfectSection() {
+        const perfectSection = document.getElementById("perfect-section");
+        perfectSection.innerHTML = ""; // Clear existing content
+        perfectData.forEach((item) => {
+          const content = `
+            <div class="col-lg-6">
+              <div class="perfect_img">
+                <span>${new Date().getFullYear()}</span>
+                <figure>
+                  <img src="${item.imageSrc.trim()}" alt="${item.heading.trim()}" />
+                </figure>
+              </div>
+            </div>
+            <div class="col-lg-6 order">
+              <div class="titlepage text_align_left">
+                <h2>${item.heading.trim()}</h2>
+                <p>${item.description.trim()}</p>
+              </div>
+            </div>`;
+          perfectSection.insertAdjacentHTML("beforeend", content);
+        });
+      }
+
+      // Load CSV data when the page loads
+      window.onload = loadPerfectCSV;
+    </script>
   </body>
 </html>

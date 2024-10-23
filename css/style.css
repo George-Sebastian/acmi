@@ -538,11 +538,6 @@ ul.email li a i {
   position: inherit;
 }
 
-.carousel-item {
-  height: 100%;
-  width: 100%;
-}
-
 .creative {
   text-align: left;
 }
@@ -559,40 +554,6 @@ ul.email li a i {
   color: #fff;
   padding: 40px 0 45px 0;
   line-height: 30px;
-}
-
-.slider_main .carousel-indicators {
-  display: none;
-}
-
-#banner1 .carousel-control-prev,
-#banner1 .carousel-control-next {
-  width: 76px;
-  height: 76px;
-  background-color: #fff;
-  color: #000;
-  font-size: 40px;
-  opacity: 1;
-  top: 98%;
-  box-shadow: 0 0 10px rgba(13, 3, 3, 0.38);
-  z-index: 999;
-  border-radius: 50px;
-}
-
-#banner1 .carousel-control-prev {
-  left: 2%;
-}
-
-#banner1 .carousel-control-next {
-  right: 2%;
-}
-
-#banner1 .carousel-control-next:focus,
-#banner1 .carousel-control-next:hover,
-#banner1 .carousel-control-prev:focus,
-#banner1 .carousel-control-prev:hover {
-  color: #fff;
-  background: #39b54a;
 }
 
 /** end banner section **/
@@ -680,14 +641,6 @@ ul.email li a i {
   background-position: center;
 }
 
-#myCarousel .testimo {
-  position: inherit;
-  bottom: 0;
-  padding: 0;
-  left: 0;
-  right: 0;
-}
-
 .combined .titlepage {
   padding-bottom: 0;
 }
@@ -721,38 +674,6 @@ ul.email li a i {
   margin: 0;
   background: #fff;
   padding: 15px 0;
-}
-
-#myCarousel .carousel-indicators {
-  display: none;
-}
-
-#myCarousel .carousel-control-prev,
-#myCarousel .carousel-control-next {
-  width: 100px;
-  height: 85px;
-  background-color: #39b54a;
-  color: #fff;
-  font-size: 20px;
-  opacity: 1;
-  top: 90%;
-  border-radius: 0px;
-}
-
-#myCarousel .carousel-control-prev {
-  left: 22.7%;
-}
-
-#myCarousel .carousel-control-next {
-  right: 22.7%;
-}
-
-#myCarousel .carousel-control-next:focus,
-#myCarousel .carousel-control-next:hover,
-#myCarousel .carousel-control-prev:focus,
-#myCarousel .carousel-control-prev:hover {
-  color: #39b54a;
-  background: #fff;
 }
 
 /** end combined **/
