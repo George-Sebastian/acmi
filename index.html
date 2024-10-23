@@ -1,174 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Basic -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-    <title>ACMI - Devamatha</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Carousel with Navbar</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
     />
-    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css" />
+    <style>
+      /* Custom style for the large image */
+      .large-image {
+        width: 100%;
+        height: auto;
+      }
+
+      /* Style for carousel images */
+      .carousel-item img {
+        max-height: 700px; /* Set a maximum height for the carousel images */
+        object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+      }
+
+      /* Style for the carousel captions */
+      .carousel-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        text-align: center;
+      }
+
+      .carousel-caption h5 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      .carousel-caption p {
+        font-size: 1rem;
+        margin: 0;
+      }
+    </style>
   </head>
-
-  <body class="main-layout">
-    <header class="header-area">
-      <div class="logo">
-        <a href="index.html">ACMI - Devamatha</a>
-      </div>
-    </header>
-
-    <!-- Banner -->
-    <div class="full_bg">
-      <div class="slider_main background-tint">
-        <!-- carousel code -->
-        <div id="banner1" class="carousel slide">
-          <ol class="carousel-indicators">
-            <li data-target="#banner1" data-slide-to="0" class="active"></li>
-          </ol>
-          <div class="carousel-inner">
-            <!-- first slide -->
-            <div class="carousel-item active">
-              <div class="container">
-                <div class="carousel-caption relative">
-                  <div class="row d_flex">
-                    <div class="col-lg-5 offset-lg-7 col-md-7 offset-md-5">
-                      <div class="creative">
-                        <h1>We aspire to help the world</h1>
-                        <p>
-                          Al the Lorem Ipsum generators on the Internet tend to
-                          repeat predefined chunks as necessary, making this the
-                          first true generator on the Internet. It uses a
-                          dictionary of over 200 Latin words, combined with
-                          different patterns.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">ACMI Devamatha</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
+
+    <!-- Large Image -->
+    <div class="container my-4">
+      <img src="images/banner1.jpg" alt="Large Image" class="large-image" />
     </div>
 
-    <!-- Perfect Section -->
-    <div class="perfect">
-      <div class="container_width">
-        <div class="row d_flex grig" id="perfect-section">
-          <!-- Dynamic content will be injected here -->
-        </div>
-      </div>
+    <!-- Events Section -->
+    <div class="container">
+      <h2 class="text-center" onclick="openFullscreen()">Events</h2>
     </div>
 
-    <!-- Footer -->
-    <footer>
-      <section id="footer">
-        <div class="footer">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="hedingh3 text_align_left">
-                  <ul class="top_infomation">
-                    <li>
-                      <img src="images/loc.png" alt="#" />
-                      <a href="https://maps.app.goo.gl/cEVXnnUGMnsGzSpB9"
-                        >Location</a
-                      >
-                    </li>
-                    <li>
-                      <img src="images/call.png" alt="#" />
-                      <a href="tel:+917560938280">7560938280 (Office ACMI)</a>
-                    </li>
-                    <li>
-                      <img src="images/call.png" alt="#" />
-                      <a href="tel:+919526113807">9526113807 (Co-ordinator)</a>
-                    </li>
-                    <li>
-                      <img src="images/mail.png" alt="#" />
-                      <a href="mailto:acmidevamathatcr@gmail.com"
-                        >acmidevamathatcr@gmail.com</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </footer>
+    <!-- Carousel -->
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner" id="carousel-inner">
+        <!-- Carousel items will be injected here dynamically -->
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-    <!-- JavaScript -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/custom.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Script to Load CSV and Populate Perfect Section -->
     <script>
-      let perfectData = []; // Array to hold data from the CSV
+      let fullscreenData = []; // Array to hold images from CSV
 
       // Function to load the CSV and parse it
-      function loadPerfectCSV() {
-        const csvFile = "images.csv"; // Path to CSV file
+      function loadCSV() {
+        const csvFile = "images.csv"; // CSV file path
         fetch(csvFile)
           .then((response) => response.text())
           .then((data) => {
-            parsePerfectCSV(data);
-            populatePerfectSection(); // Populate the section after CSV data is loaded
+            parseCSV(data);
+            createCarousel(); // Create carousel after CSV data is loaded
           });
       }
 
-      // Parse CSV data and convert it to an array of objects
-      function parsePerfectCSV(data) {
-        const rows = data.split("\n").slice(1); // Remove the header row
+      // Parse CSV data and convert it to an array of image objects
+      function parseCSV(data) {
+        const rows = data.split("\n").slice(1); // Remove header row
         rows.forEach((row) => {
           const [imageSrc, heading, description] = row.split(",");
           if (imageSrc && heading && description) {
-            perfectData.push({ imageSrc, heading, description });
+            fullscreenData.push({ imageSrc, heading, description });
           }
         });
       }
 
-      // Function to populate the perfect section dynamically
-      function populatePerfectSection() {
-        const perfectSection = document.getElementById("perfect-section");
-        perfectSection.innerHTML = ""; // Clear existing content
-        perfectData.forEach((item) => {
-          const content = `
-            <div class="col-lg-6">
-              <div class="perfect_img">
-                <span>${new Date().getFullYear()}</span>
-                <figure>
-                  <img src="${item.imageSrc.trim()}" alt="${item.heading.trim()}" />
-                </figure>
-              </div>
+      // Function to create carousel dynamically using CSV data
+      function createCarousel() {
+        const carouselInner = document.getElementById("carousel-inner");
+        carouselInner.innerHTML = ""; // Clear existing items
+        fullscreenData.forEach((item, index) => {
+          const carouselItem = document.createElement("div");
+          carouselItem.classList.add("carousel-item");
+          if (index === 0) carouselItem.classList.add("active");
+
+          carouselItem.innerHTML = `
+            <img src="${item.imageSrc.trim()}" class="d-block w-100" alt="${item.heading.trim()}">
+            <div class="carousel-caption">
+              <h5>${item.heading.trim()}</h5>
+              <p>${item.description.trim()}</p>
             </div>
-            <div class="col-lg-6 order">
-              <div class="titlepage text_align_left">
-                <h2>${item.heading.trim()}</h2>
-                <p>${item.description.trim()}</p>
-              </div>
-            </div>`;
-          perfectSection.insertAdjacentHTML("beforeend", content);
+          `;
+
+          carouselInner.appendChild(carouselItem);
         });
       }
 
+      let currentSlideIndex = 0;
+
+      // Function to open fullscreen slideshow
+      function openFullscreen() {
+        if (fullscreenData.length === 0) {
+          alert("No images to display!");
+          return;
+        }
+
+        // Create fullscreen container
+        const fullscreenContainer = document.createElement("div");
+        fullscreenContainer.style.position = "fixed";
+        fullscreenContainer.style.top = "0";
+        fullscreenContainer.style.left = "0";
+        fullscreenContainer.style.width = "100%";
+        fullscreenContainer.style.height = "100%";
+        fullscreenContainer.style.backgroundColor = "black";
+        fullscreenContainer.style.zIndex = "9999";
+        fullscreenContainer.style.display = "flex";
+        fullscreenContainer.style.alignItems = "center";
+        fullscreenContainer.style.justifyContent = "center";
+        fullscreenContainer.style.flexDirection = "column";
+
+        // Create image element
+        const img = document.createElement("img");
+        img.style.maxWidth = "100%";
+        img.style.maxHeight = "100%";
+        img.style.objectFit = "contain";
+
+        // Create caption element
+        const caption = document.createElement("div");
+        caption.style.color = "white";
+        caption.style.textAlign = "center";
+        caption.style.marginTop = "10px";
+
+        // Create navigation buttons
+        const prevButton = document.createElement("button");
+        const nextButton = document.createElement("button");
+        prevButton.innerText = "❮";
+        nextButton.innerText = "❯";
+        prevButton.style.position = nextButton.style.position = "absolute";
+        prevButton.style.top = nextButton.style.top = "50%";
+        prevButton.style.left = "10px";
+        nextButton.style.right = "10px";
+        prevButton.style.transform = nextButton.style.transform =
+          "translateY(-50%)";
+        prevButton.style.backgroundColor = nextButton.style.backgroundColor =
+          "rgba(0,0,0,0.5)";
+        prevButton.style.color = nextButton.style.color = "white";
+        prevButton.style.border = nextButton.style.border = "none";
+        prevButton.style.fontSize = nextButton.style.fontSize = "30px";
+        prevButton.style.cursor = nextButton.style.cursor = "pointer";
+
+        // Append elements to the fullscreen container
+        fullscreenContainer.appendChild(prevButton);
+        fullscreenContainer.appendChild(nextButton);
+        fullscreenContainer.appendChild(img);
+        fullscreenContainer.appendChild(caption);
+
+        // Show the first image initially
+        showSlide(currentSlideIndex, img, caption);
+
+        // Add event listeners for next/prev buttons
+        prevButton.addEventListener("click", () => {
+          currentSlideIndex =
+            (currentSlideIndex - 1 + fullscreenData.length) %
+            fullscreenData.length;
+          showSlide(currentSlideIndex, img, caption);
+        });
+
+        nextButton.addEventListener("click", () => {
+          currentSlideIndex = (currentSlideIndex + 1) % fullscreenData.length;
+          showSlide(currentSlideIndex, img, caption);
+        });
+
+        // Close fullscreen on clicking anywhere else
+        fullscreenContainer.addEventListener("click", (e) => {
+          if (e.target === fullscreenContainer) {
+            document.body.removeChild(fullscreenContainer);
+          }
+        });
+
+        document.body.appendChild(fullscreenContainer);
+      }
+
+      // Function to show the current slide in fullscreen
+      function showSlide(index, img, caption) {
+        const { imageSrc, heading, description } = fullscreenData[index];
+        img.src = imageSrc.trim(); // Trim to remove extra spaces
+        caption.innerHTML = `<h2>${heading.trim()}</h2><p>${description.trim()}</p>`;
+      }
+
       // Load CSV data when the page loads
-      window.onload = loadPerfectCSV;
+      window.onload = loadCSV;
     </script>
   </body>
 </html>
